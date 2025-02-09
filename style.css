@@ -1,0 +1,518 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, transparent 0%, transparent 50%, transparent 100%);
+    background-attachment: fixed;
+    line-height: 1.6;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('p2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+/* Navbar styling */
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(248, 240, 247, 0.5); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.logo-container a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Georgia', serif;
+    color: #2c0347;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.logo-container {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(120deg, #e491ad, #ffb3c6); 
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    max-width: 400px; 
+    height: 120px; 
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+
+
+.logo img {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* Glowing Animation for the Logo */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ff80ab, 0 0 20px #ff80ab, 0 0 30px #ff80ab, 0 0 40px #e04f63, 0 0 50px #e04f63;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #ff80ab, 0 0 30px #ff80ab, 0 0 40px #ff80ab, 0 0 60px #e04f63, 0 0 80px #e04f63;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #ff80ab, 0 0 20px #ff80ab, 0 0 30px #ff80ab, 0 0 40px #e04f63, 0 0 50px #e04f63;
+    }
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6d4c8c;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background-color: #e04f63;
+    transform: scale(1.05);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e04f63;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    padding-right: 190px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    margin: 50px auto;
+    max-width: 80%;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #e04f63;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 35px;
+    font-family: fantasy;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    max-width: 50%;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 950px;
+    border-radius: 12px;
+    margin: 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e04f63;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #c44356;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}
+/* Diet Box Container */
+.diet-box,
+.physical-health-box {
+    background: linear-gradient(to bottom, #fad1de, #fff);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1300px;
+    max-height: 1500px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.diet-box h2,
+.physical-health-box h2 {
+    font-size: 50px;
+}
+
+.diet-box::before,
+.physical-health-box::before {
+    left: 0;
+}
+
+.diet-box::after,
+.physical-health-box::after {
+    right: 0;
+}
+
+/* Diet AND Exercise Form Styling */
+.diet-label,
+.exercise-label {
+    font-size: 45px; 
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+    font-weight: 500;
+}
+
+.diet-select,
+.exercise-select {
+    width: 40%;
+    height: 70px; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 25px; 
+}
+
+#dietSuggestions,
+.exercise-suggestions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+}
+
+#dietSuggestions div h3,
+.exercise-suggestions div h3 {
+    font-size: 30px; 
+}
+
+#dietSuggestions div p a,
+.exercise-suggestions div p a { 
+    font-size: 20px; 
+}
+
+.diet-suggestions img,
+.exercise-suggestions img {
+    width: 280px; 
+    height: 250px;
+    margin-bottom: 0px;
+}
+
+
+/* Button Styling */
+.btn {
+    display: block;
+    justify-content: center;
+    width: 60%;
+    padding: 20px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #52ad55;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 260px;
+    margin-top: 10px;
+    margin-bottom:0.15px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the Mental Health Intro Section */
+.mentalHealthIntro {
+    padding: 50px 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center;
+    background-image: url("p4.jpg"); 
+    background-size:660px 600px; 
+    background-position: left;
+    background-repeat: no-repeat;
+    color: #333; 
+    position: relative; 
+    height:500px;
+}
+
+/*Overlay for better readability*/
+.mentalHealthIntro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    
+    left: 42%; 
+    width: 60%; 
+    height: 100%;
+    background-color: rgba(235, 229, 253, 0.6); 
+    border-radius: 0 15px 15px 0; 
+    z-index: 1;
+}
+
+.mentalHealthIntro .text-container {
+    position: relative;
+    z-index: 2; 
+    width: 55%; 
+    text-align: left;
+    padding-right: 30px; 
+}
+
+.mentalHealthIntro h2 {
+    font-size: 40px;  
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-family: 'Arial', sans-serif;
+}
+
+.mentalHealthIntro h3 {
+    font-size: 30px; 
+    font-weight: 600;
+    color: #333; 
+    margin: 15px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.mentalHealthIntro p {
+    font-size: 25px;  
+    color: #555; 
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 0 auto 25px;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .mentalHealthIntro h2 {
+        font-size: 24px;
+    }
+
+    .mentalHealthIntro h3 {
+        font-size: 20px;
+    }
+
+    .mentalHealthIntro p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+
+.threePillars {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;  
+    gap: 10px; 
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+/* Card Styling */
+.card {
+    width: 350px; 
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    flex: 1 1 350px;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+.card img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Background Colors */
+.yellow-bg {
+    background-color: #FFF6CC;
+}
+
+.pink-bg {
+    background-color: #FDE5E5;
+}
+
+.blue-bg {
+    background-color: #E5F2FF;
+}
+
+.card h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    font-weight: normal;
+    color: #777;
+}
+
+.card p {
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+
+/* Add responsive styling for cards */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: rgba(248, 240, 247, 0.7); /* Light pink with transparency */
+    color: #333; /* Dark text color */
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative; /* Sticks the footer to the bottom */
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+}
+

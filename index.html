@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=0.75, minimum-scale=0.75, user-scalable=no">
+    <title>HerSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="https://img-c.udemycdn.com/course/750x422/5421312_a506_3.jpg" alt="HerSync Logo">
+                    <h1>HerSync</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#whoWeAre" id="whoWeAreBtn">WHO WE ARE</a></li>
+                <li><a href="#whatWeDo" id="whatWeDoBtn">WHAT WE DO</a></li>
+                <li><a href="#" id="dietLink">DIET</a></li>
+                <!-- <li><a href="#" id="mentalHealthBtn">MENTAL HEALTH</a></li> -->
+                <li><a href="#" id="physicalHealthBtn">PHYSICAL HEALTH</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Journey to Managing PCOD Starts Here</h1>
+            <p>HerSync offers personalized resources, expert advice, and unwavering support to guide you through managing
+                PCOD. Our approach helps you understand your body better and provides solutions that empower you to live a
+                healthier and more balanced life.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxd3Z0nTiFs27j3smyu3Zw0dQnwa82qcyaVw&s"
+                alt="Woman smiling">
+        </div>
+    </section>
+
+    <!--DIET-->
+    <div id="dietBox" class="diet-box" style="display: none;">
+        <h2>PCOD Diet Recommendations</h2>
+
+        <!-- Diet Selection Form -->
+        <label for="dietType" class="diet-label">Choose Your Diet Type:</label>
+        <select id="dietType" class="diet-select">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten free">Gluten-Free</option>
+            <option value="keto">Keto</option>
+        </select>
+        <button id="getDietButton" class="btn">Get Diet</button>
+
+        
+        <div id="dietSuggestions" class="diet-suggestions" style="display: none;"></div>
+    </div>
+
+    <!--PHYSICAL HEALTH-->
+    <div id="physicalHealthBox" class="physical-health-box" style="display: none;">
+        <h2>Physical Health Activities</h2>
+
+        <!-- Exercise Selection Form -->
+        <label for="exerciseType" class="exercise-label">Choose Your Exercise Type:</label>
+        <select id="exerciseType" class="exercise-select">
+            <option value="cardio">Cardio</option>
+            <option value="lower legs">Lower legs</option>
+            <option value="upper legs">Upper legs</option>
+            <option value="waist">Core Strengthening</option>
+            <option value="neck">Stress Reduction</option>
+            <option value="chest">Strengthening and Posture</option>
+        </select>
+        <button id="getExercisesBtn" class="btn">Get Exercises</button>
+        
+        <div id="exerciseSuggestions" class="exercise-suggestions" style="display: none;"></div>
+    </div>
+
+    <!--Her Sync intro-->
+    <div class="mentalHealthIntro">
+        <div class="text-container">
+            <h2>In a Fast-Paced World, Health Takes a Step Back</h2>
+    
+            <h3>HerSync: Empowering You to Overcome PCOD</h3>
+            <p>In today's fast-paced world, health often takes a step back, and our bodies suffer, especially when dealing
+                with conditions like PCOD. HerSync is here to change that by offering you the tools, knowledge, and support
+                to regain control over your body and mind. With a holistic approach, we nurture both your physical and mental
+                well-being, ensuring every step of your journey is guided by a comprehensive understanding of PCOD. Our
+                three pillars work together to create a personalized experience that helps you manage and ultimately overcome
+                PCOD.</p>
+        </div>
+    </div>
+    
+    
+
+    <!--Three Pillars-->
+    <div class="threePillars">
+        <div class="container">
+            <div class="card yellow-bg">
+                <img src="https://cdn-icons-png.flaticon.com/128/2920/2920277.png" alt="Diet">
+                <h2>PCOD-Friendly Diet</h2>
+                <h3>Fuel Your Body for Balance</h3>
+                <p>Hersync provides tailored dietary recommendations to help manage PCOD symptoms. From
+                    hormone-balancing
+                    meals to anti-inflammatory foods, we guide you toward a diet that supports overall well-being and
+                    sustainable health.</p>
+            </div>
+
+            <div class="card pink-bg">
+                <img src="https://cdn-icons-png.flaticon.com/128/14290/14290688.png" alt="Well-being">
+                <h2>Nurturing Mind + Body</h2>
+                <h3>A Balanced Approach to PCOD</h3>
+                <p>At Hersync, we provide tailored diet plans to balance hormones and support mental well-being. By
+                    nurturing
+                    both body and mind, we help you manage PCOD holistically, empowering you to live your healthiest
+                    life
+                    and embrace lasting wellness.</p>
+            </div>
+
+            <div class="card blue-bg">
+                <img src="https://cdn-icons-png.flaticon.com/256/4288/4288932.png" alt="Empowerment through Education">
+                <h2>Empowerment through Education</h2>
+                <h3>Knowledge is a Catalyst for Change</h3>
+                <p>At Hersync, we break the stigma around PCOD by offering clear, reliable information. Our goal is to
+                    empower individuals to take control of their health with expert advice, educational resources, and
+                    community support. Knowledge is the first step toward managing PCOD and living a healthier life.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 HerSync. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
