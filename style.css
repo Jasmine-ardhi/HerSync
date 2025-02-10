@@ -583,15 +583,15 @@ body::before {
     }
     
     .mentalHealthIntro h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .mentalHealthIntro h3 {
-        font-size: 20px;
+        font-size:24px;
     }
 
     .mentalHealthIntro p {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     /* Adjust logo container */
@@ -615,5 +615,25 @@ body::before {
     .card {
         width: 100%;
         padding: 20px;
+    }
+
+    .diet-box,.physical-health-box {
+        padding: 20px;
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+        overflow-y: auto; 
+        max-height: none;  
+    }
+
+    /* Ensure parent container doesn't push it out */
+    .diet-container , .physical-health-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Prevents any overflow issues */
     }
 }
