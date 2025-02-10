@@ -504,12 +504,12 @@ body::before {
 
 /*footer*/
 .footer {
-    background-color: rgba(248, 240, 247, 0.7); /* Light pink with transparency */
-    color: #333; /* Dark text color */
+    background-color: rgba(248, 240, 247, 0.7); 
+    color: #333;
     text-align: center;
     padding: 15px;
     width: 100%;
-    position: relative; /* Sticks the footer to the bottom */
+    position: relative; 
     bottom: 0;
     left: 0;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
@@ -520,6 +520,11 @@ body::before {
 /* Mobile responsiveness (for screens smaller than 768px) */
 @media (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+        overflow-y: auto; /* Allows vertical scrolling */
+    }
+    
     .hero {
         flex-direction: column;
         text-align: center;
@@ -564,35 +569,68 @@ body::before {
         display: block;
     }
     
-   
     .mentalHealthIntro {
-        width: 95%; 
-        padding: 30px 20px;
-        flex-direction: column; 
-        margin-right: 0; 
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.9); 
+        z-index:7;
     }
-    
+
     .mentalHealthIntro .text-container {
         width: 100%; 
        
     }
 
-    .mentalHealthIntro {
-        position: relative; 
-       
-    }
-    
-    .mentalHealthIntro h2 {
-        font-size: 30px;
-    }
 
-    .mentalHealthIntro h3 {
-        font-size:24px;
+    .mentalHealthIntro h2,
+    .mentalHealthIntro h3{
+        width: 100%; 
+        font-size: 24px;
+        text-align: center; 
+        color: #333; 
+        z-index: 2;
+        position: relative; 
     }
 
     .mentalHealthIntro p {
-        font-size: 19px;
+        width: 100%;
+        font-size: 20px;
+        font-family:Arial, Helvetica, sans-serif ;
+        color: #222020;
+        text-align: justify; 
+        margin-bottom: 15px; 
     }
+   
+    .mentalHealthIntro::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(236, 241, 210, 0.4), rgba(234, 198, 250, 0.4));
+        z-index: -1;
+    }
+
+ 
+    .mentalHealthIntro img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        filter: brightness(1.2); 
+    }
+    
 
     /* Adjust logo container */
     .logo-container {
@@ -606,7 +644,7 @@ body::before {
         height: 80px;
     }
 
-    /* Adjust other containers for better mobile view */
+   
     .container {
         flex-direction: column;
         padding: 20px;
@@ -628,12 +666,12 @@ body::before {
         max-height: none;  
     }
 
-    /* Ensure parent container doesn't push it out */
+   
     .diet-container , .physical-health-box{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow: hidden; /* Prevents any overflow issues */
+        overflow: hidden;
     }
 }
